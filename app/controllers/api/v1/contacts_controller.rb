@@ -37,7 +37,7 @@ class Api::V1::ContactsController < Api::V1::ApiController
 
         else
 
-            render json: @contact.errors, status: : :unprocessable_entity
+            render json: @contact.errors, status: :unprocessable_entity
 
         end
 
