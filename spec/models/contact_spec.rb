@@ -27,14 +27,13 @@ RSpec.describe Contact, type: :model do
     expect(contact).to_not be_valid
   end
 
-    it 'should not create contact without name' do
-      contact = build(:contact, name: nil)
-      expect(contact).to_not be_valid
-    end
+  it 'should not create contact without name' do
+    contact = build(:contact, name: nil)
+    expect(contact).to_not be_valid
+  end
 
-    it 'should create contact with name and user' do
-      contact = build(:contact)
-      expect(contact).to be_valid
-    end
-
+  it 'should create contact with name and user' do
+    contact = build(:contact)
+    expect(contact).to be_valid
+  end
 end
