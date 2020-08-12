@@ -19,13 +19,18 @@
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
-class User < ApplicationRecord
-  acts_as_token_authenticatable
+require 'rails_helper'
 
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+RSpec.describe User, type: :model do
 
-  has_many :contacts, dependent: :destroy
+  it 'should create a new user' do
+    user = build(:user)
+    expect(user).to be_valid
+  end
+
+  it 'should not create a new user without password' do
+    user = build(:user, password: nil)
+    expect(user).to_not be_valid
+  end
+
 end

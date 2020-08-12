@@ -12,7 +12,8 @@ This API is a mini-course from One Bit Code (https://onebitcode.com/).
 
 * Database creation  
   
-  $ rake db:create && rake db:migrate
+  
+    $ rake db:create && rake db:migrate
 
 * How to run the test suite
 
