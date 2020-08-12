@@ -14,7 +14,8 @@ This API is a mini-course from One Bit Code (https://onebitcode.com/).
   
     $ rake db:create && rake db:migrate
 
-* How to run the test suite
+* How to run the test suite  
+  $  bundle exec rspec
 
 * Additions to the initial project:  
   - Pagination using Kaminari  
