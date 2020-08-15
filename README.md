@@ -19,3 +19,4 @@ This API is a mini-course from One Bit Code (https://onebitcode.com/).
 * Additions to the initial project:  
   - Pagination using Kaminari  
   - Tests using RSpec  
+  - Contact can have many addresses
