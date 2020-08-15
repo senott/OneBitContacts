@@ -22,7 +22,11 @@
 class Contact < ApplicationRecord
   belongs_to :user
 
+  has_many :addresses, dependent: :destroy
+  accepts_nested_attributes_for :addresses, allow_destroy: true
+  
   validates :name, :user, presence: true
 
   paginates_per 10
+
 end
